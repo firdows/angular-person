@@ -4,4 +4,5 @@ export const AppUrl = {
     Register: 'register',
     Authen: 'authentication',
     Person: 'person',
+    PersonCreate: 'person-create',
 }

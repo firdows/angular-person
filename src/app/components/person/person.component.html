@@ -1,3 +1,6 @@
 <app-layouts [title1]="Person">
-    <p>person works!</p>
+    <h2>Persons</h2>
+    <a [routerLink]="['/',AppUrl.PersonCreate]" class="btn btn-success">
+        Create Person
+    </a>
 </app-layouts>

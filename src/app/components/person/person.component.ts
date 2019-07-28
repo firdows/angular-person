@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppUrl } from 'src/app/app.url';
 
 @Component({
   selector: 'app-person',
@@ -11,5 +12,7 @@ export class PersonComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  AppUrl = AppUrl;
 
 }
