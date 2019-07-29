@@ -16,11 +16,15 @@ export class HttpService {
 
 
     requestGet(path: string) {
-
+       return this.http.get(`${this.address}${path}`, {
+            headers:this.appendHeaders()
+        })
+        .pipe();
+        //.subscribe(res => console.log(res));
     }
 
     requestPost(path: string, body: any) {
-        this.http.post(`${this.address}${path}`, body,{
+        return this.http.post(`${this.address}${path}`, body,{
             headers:this.appendHeaders()
         })
             .subscribe(res => console.log(res));

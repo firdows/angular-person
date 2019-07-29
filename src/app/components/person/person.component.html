@@ -3,4 +3,24 @@
     <a [routerLink]="['/',AppUrl.PersonCreate]" class="btn btn-success">
         Create Person
     </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ชื่อ</th>
+                <th>สกุล</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items.items">
+                <td>{{item.id}}</td>
+                <td>{{item.firstname}}</td>
+                <td>{{item.lastname}}</td>
+                <td>
+                    <a h>แก้ไข</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </app-layouts>
