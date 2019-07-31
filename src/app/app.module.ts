@@ -9,13 +9,15 @@ import { PersonComponent } from './components/person/person.component';
 import { PersonCreateComponent } from './components/person-create/person-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PersonComponent,
-    PersonCreateComponent
+    PersonCreateComponent,
+    LoginComponent
   ],
   imports: [
     AppRouting,

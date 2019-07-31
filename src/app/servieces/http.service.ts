@@ -13,6 +13,7 @@ export class HttpService {
     }
 
     private address: string = "http://localhost:10386/api/";
+    private addressEss: string = "http://extrassup.ssup.co.th/api/v1/";
 
 
     requestGet(path: string) {
@@ -25,6 +26,13 @@ export class HttpService {
 
     requestPost(path: string, body: any) {
         return this.http.post(`${this.address}${path}`, body,{
+            headers:this.appendHeaders()
+        })
+            .subscribe(res => console.log(res));
+    }
+
+    requestEssPost(path: string, body: any) {
+        return this.http.post(`${this.addressEss}${path}`, body,{
             headers:this.appendHeaders()
         })
             .subscribe(res => console.log(res));
