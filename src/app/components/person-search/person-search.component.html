@@ -1,0 +1,20 @@
+<form>
+
+
+    <div class="form-group raw">
+        <label class="col-sm-2">Search</label>
+        <input class="form-control" 
+            id="car" 
+            name="car" 
+            [(ngModel)]="asyncSelected" 
+            [typeaheadAsync]="true"
+            [typeahead]="asyncCars" 
+            (typeaheadLoading)="changeTypeaheadLoading($event)"
+            (typeaheadOnSelect)="typeaheadOnSelect($event)"
+            typeaheadOptionField="firstname"
+          />
+    </div>
+
+
+
+</form>

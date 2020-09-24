@@ -10,6 +10,11 @@ import { PersonCreateComponent } from './components/person-create/person-create.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
+import { PersonViewComponent } from './components/person-view/person-view.component';
+import { PersonSearchComponent } from './components/person-search/person-search.component';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,15 +22,20 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     PersonComponent,
     PersonCreateComponent,
-    LoginComponent
+    LoginComponent,
+    PersonViewComponent,
+    PersonSearchComponent
   ],
   imports: [
     AppRouting,
+    RouterModule,
     BrowserModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TypeaheadModule.forRoot(),
+    BrowserAnimationsModule
 
   ],
   providers: [],

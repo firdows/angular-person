@@ -1,6 +1,9 @@
 <app-layouts [title1]="Person">
     <h2>Persons</h2>
-    <a [routerLink]="['/',AppUrl.PersonCreate]" class="btn btn-success">
+
+    <app-person-search></app-person-search>
+
+    <a [routerLink]="['/',AppUrl.Person,AppUrl.PersonCreate]" class="btn btn-success">
         Create Person
     </a>
     <table class="table">
@@ -18,7 +21,9 @@
                 <td>{{item.firstname}}</td>
                 <td>{{item.lastname}}</td>
                 <td>
-                    <a h>แก้ไข</a>
+                    <a [routerLink]="['/',AppUrl.Person,AppUrl.PersonView,item.id]" class="btn">ดู</a>
+                    <a [routerLink]="['/',AppUrl.Person,AppUrl.PersonUpdate,item.id]" class="btn">แก้ไข</a>
+                    <a (click)="DeletePerson(item.id)" class="btn">ลบ</a>
                 </td>
             </tr>
         </tbody>
